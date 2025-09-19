@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ultra Voice Submission</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #d6336c;
+    }
+    .form-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background: #d6336c;
+      color: #fff;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .result-box {
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: left;
+      display: none; /* hidden until form is submitted */
+    }
+    .result-box h2 {
+      margin-top: 0;
+      color: #28a745;
+    }
+    .result-box p {
+      margin: 6px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Altar boys Ice Cream</h1>
+
+  <div class="form-box">
+    <form id="submissionForm">
+      <!-- Name -->
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Address -->
+      <label for="address">Address</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <!-- Model Name -->
+      <label for="model">Flavour</label>
+      <select id="model" name="model" required>
+        <option value="Vanilla">Vanilla</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Red Welvet">Red Welvet</option>
+        <option value="Strawberry ">Strawberry </option>
+         <option value="Pista Plain">Pista Plain</option>
+          <option value="Pineapple">Pineapple</option>
+           <option value="Red Welvet">Red Welvet</option>
+            <option value="Red Welvet">Red Welvet</option>
+             <option value="Red Welvet">Red Welvet</option>
+              <option value="Red Welvet">Red Welvet</option>
+               <option value="Red Welvet">Red Welvet</option>
+                <option value="Red Welvet">Red Welvet</option>
+                
+      </select>
+
+      <!-- Liter Option -->
+      <label for="liter">Quantity ( Liter )</label>
+      <select id="liter" name="liter" required>
+        <option value="1/2 Liter">1/2 L</option>
+        <option value="1 Liter">1 L</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Result will show here -->
+  <div class="result-box" id="resultBox">
+    <h2>Submission Result</h2>
+    <p><strong>Name:</strong> <span id="resName"></span></p>
+    <p><strong>Address:</strong> <span id="resAddress"></span></p>
+    <p><strong>Model:</strong> <span id="resModel"></span></p>
+    <p><strong>Quantity:</strong> <span id="resLiter"></span></p>
+  </div>
+
+  <script>
+    const form = document.getElementById("submissionForm");
+    const resultBox = document.getElementById("resultBox");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // prevent page reload
+
+      // Get values
+      document.getElementById("resName").textContent = document.getElementById("name").value;
+      document.getElementById("resAddress").textContent = document.getElementById("address").value;
+      document.getElementById("resModel").textContent = document.getElementById("model").value;
+      document.getElementById("resLiter").textContent = document.getElementById("liter").value;
+
+      // Show result box
+      resultBox.style.display = "block";
+      resultBox.scrollIntoView({behavior:"smooth"});
+    });
+  </script>
+   <u><b>PRESIDENT<BR><BR></u>
+  <b>SONET C S</b><br>
+  <i>Ph.No : 7012010883</b></i>
+  
+</body>
+</html>
